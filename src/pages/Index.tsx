@@ -1,12 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Navbar from "@/components/layout/Navbar";
+import MusicPlayer from "@/components/music/MusicPlayer";
+import HeroSection from "@/components/home/HeroSection";
+import NewReleases from "@/components/home/NewReleases";
+import PopularTracks from "@/components/home/PopularTracks";
+import GenreSection from "@/components/home/GenreSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="bg-background min-h-screen">
+      {/* Навигационная панель */}
+      <Navbar />
+      
+      {/* Основное содержимое */}
+      <main className="container mx-auto px-4 pt-24 pb-28">
+        {/* Героический баннер */}
+        <HeroSection />
+        
+        {/* Новые релизы */}
+        <NewReleases />
+        
+        {/* Популярные треки */}
+        <PopularTracks />
+        
+        {/* Популярные жанры */}
+        <GenreSection />
+      </main>
+      
+      {/* Музыкальный плеер */}
+      <MusicPlayer />
     </div>
   );
 };
